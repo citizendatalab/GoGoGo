@@ -3,12 +3,7 @@
  * GET home page.
  */
  var polyline = require('polyline');
- var ObjectId=require('mongodb').ObjectID;
-
-exports.index = function(req, res){
-	res.render('index', {});
-};
-
+ var ObjectId = require('mongodb').ObjectID;
 
 function gps_distance(lat1, lon1, lat2, lon2)
 {
@@ -221,10 +216,6 @@ exports.getranking = function(db) {
             res.json(returnObject);
         });
     };
-};
-
-exports.map = function(req, res){
-	res.render('map', {});
 };
 
 exports.getdata = function(db) {

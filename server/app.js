@@ -37,7 +37,6 @@ router.get('/getdatacount/:id', routes.getdatacount_byid(db));
 router.get('/getranking2', routes.getranking(db));
 router.get('/getlastdata/:count', routes.getlastdata(db));
 
-router.get('/map', routes.map);
 router.get('/getdata', routes.getdata(db));
 
 
