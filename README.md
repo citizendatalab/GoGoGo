@@ -8,7 +8,7 @@ More information and the final results can be viewed [here](http://cargocollecti
 
 ## Code
 The code consists of an Cordova app and a server to store the data.
-The server consists of an API which communicates with the mobile application and a visualization created in AngularJS to show the collected data. The visualization was created by [Calibro](http://calib.ro/). The original code can be found [here](https://github.com/calibro/gogogo-live). In this repository, the visualization is combined with the API. 
+The server consists of an API which communicates with the mobile application and a visualization created in AngularJS to show the collected data. The visualization was created by Matteo Azzi from [Calibro](http://calib.ro/). The original code can be found [here](https://github.com/calibro/gogogo-live). In this repository, the visualization is combined with the API. An example script to clean the collected data can be found in /server/cleandata/.
 
 
 ## Deploying server
