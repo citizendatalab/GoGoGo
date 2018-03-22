@@ -1,0 +1,15 @@
+server/node_modules
+server/public/bower_components/
+
+app/*.DS_Store
+
+app/plugins/*
+app/plugins\/*
+
+app/platforms/*
+app/platforms\/*
+
+app/node_modules/*
+app/node_modules\/*
+
+app/mykey.keystore

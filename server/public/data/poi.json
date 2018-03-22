@@ -1,0 +1,234 @@
+{
+	"type": "FeatureCollection",
+	"features": [{
+		"type": "Feature",
+		"geometry": {
+			"type": "Point",
+			"coordinates": [4.900399,52.3724]
+		},
+		"properties": {
+			"name": "Nieuwmarkt ",
+			"category": ""
+		}
+	}, {
+		"type": "Feature",
+		"geometry": {
+			"type": "Point",
+			"coordinates": [4.918784,52.346774]
+		},
+		"properties": {
+			"name": "Station Amsterdam Amstel",
+			"category": ""
+		}
+	}, {
+		"type": "Feature",
+		"geometry": {
+			"type": "Point",
+			"coordinates": [4.903124,52.368789]
+		},
+		"properties": {
+			"name": "Winkelstraat Nieuwmarkt - Mr Visserplein",
+			"category": "Horeca"
+		}
+	}, {
+		"type": "Feature",
+		"geometry": {
+			"type": "Point",
+			"coordinates": [4.908016,52.361253]
+		},
+		"properties": {
+			"name": "Horeca Weesperplein",
+			"category": "Horeca"
+		}
+	}, {
+		"type": "Feature",
+		"geometry": {
+			"type": "Point",
+			"coordinates": [4.911144,52.356614]
+		},
+		"properties": {
+			"name": "Hartog Bakkerij/Lokaal",
+			"category": "Horeca"
+		}
+	}, {
+		"type": "Feature",
+		"geometry": {
+			"type": "Point",
+			"coordinates": [4.905111,52.368414]
+		},
+		"properties": {
+			"name": "Amsterdamse Hogeschool van de Kunsten (AHK)",
+			"category": "Onderwijs"
+		}
+	}, {
+		"type": "Feature",
+		"geometry": {
+			"type": "Point",
+			"coordinates": [4.909332,52.359888]
+		},
+		"properties": {
+			"name": "HvA locatie Benno Premselahuis",
+			"category": "Onderwijs"
+		}
+	}, {
+		"type": "Feature",
+		"geometry": {
+			"type": "Point",
+			"coordinates": [4.908385,52.354743]
+		},
+		"properties": {
+			"name": "Basisschool de Pinksterbloem",
+			"category": "Onderwijs"
+		}
+	}, {
+		"type": "Feature",
+		"geometry": {
+			"type": "Point",
+			"coordinates": [4.912271,52.355012]
+		},
+		"properties": {
+			"name": "Cygnus Gymnasium",
+			"category": "Onderwijs"
+		}
+	}, {
+		"type": "Feature",
+		"geometry": {
+			"type": "Point",
+			"coordinates": [4.916322,52.346108]
+		},
+		"properties": {
+			"name": "HvA locatie Leeuwenburg",
+			"category": "Onderwijs"
+		}
+	}, {
+		"type": "Feature",
+		"geometry": {
+			"type": "Point",
+			"coordinates": [4.904088,52.367185]
+		},
+		"properties": {
+			"name": "Joods Historisch Kwartier",
+			"category": "Cultureel"
+		}
+	}, {
+		"type": "Feature",
+		"geometry": {
+			"type": "Point",
+			"coordinates": [4.902337,52.365268]
+		},
+		"properties": {
+			"name": "Hermitage ",
+			"category": "Cultureel"
+		}
+	}, {
+		"type": "Feature",
+		"geometry": {
+			"type": "Point",
+			"coordinates": [4.90831,52.367326]
+		},
+		"properties": {
+			"name": "Hortus",
+			"category": "Cultureel"
+		}
+	}, {
+		"type": "Feature",
+		"geometry": {
+			"type": "Point",
+			"coordinates": [4.903834,52.362328]
+		},
+		"properties": {
+			"name": "Carré",
+			"category": "Cultureel"
+		}
+	}, {
+		"type": "Feature",
+		"geometry": {
+			"type": "Point",
+			"coordinates": [4.906633,52.363909]
+		},
+		"properties": {
+			"name": "Daktuin van Zoku",
+			"category": "Groen"
+		}
+	}, {
+		"type": "Feature",
+		"geometry": {
+			"type": "Point",
+			"coordinates": [4.909451,52.358077]
+		},
+		"properties": {
+			"name": "Parkje aan Wibautstraat",
+			"category": "Groen"
+		}
+	}, {
+		"type": "Feature",
+		"geometry": {
+			"type": "Point",
+			"coordinates": [4.9099,52.353029]
+		},
+		"properties": {
+			"name": "Groenstrook aan Amstel",
+			"category": "Groen"
+		}
+	}, {
+		"type": "Feature",
+		"geometry": {
+			"type": "Point",
+			"coordinates": [4.913636,52.352793]
+		},
+		"properties": {
+			"name": "Wibautpark",
+			"category": "Groen"
+		}
+	}, {
+		"type": "Feature",
+		"geometry": {
+			"type": "Point",
+			"coordinates": [4.906633,52.363909]
+		},
+		"properties": {
+			"name": "Zoku (Hotel)",
+			"category": "Café"
+		}
+	}, {
+		"type": "Feature",
+		"geometry": {
+			"type": "Point",
+			"coordinates": [4.91015,52.359808]
+		},
+		"properties": {
+			"name": "Fest",
+			"category": "Café"
+		}
+	}, {
+		"type": "Feature",
+		"geometry": {
+			"type": "Point",
+			"coordinates": [4.906677,52.357471]
+		},
+		"properties": {
+			"name": "De Ysbreker",
+			"category": "Café"
+		}
+	}, {
+		"type": "Feature",
+		"geometry": {
+			"type": "Point",
+			"coordinates": [4.912591,52.354596]
+		},
+		"properties": {
+			"name": "Student Hotel",
+			"category": "Café"
+		}
+	}, {
+		"type": "Feature",
+		"geometry": {
+			"type": "Point",
+			"coordinates": [4.911985,52.35385]
+		},
+		"properties": {
+			"name": "Volkshotel",
+			"category": "Café"
+		}
+	}]
+}

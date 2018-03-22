@@ -1,0 +1,177 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+	<title>GoGoGo route tracker</title>
+	
+	<script type="text/javascript" src="cordova.js"></script>
+	<script type="text/javascript" src="http://maps.googleapis.com/maps/api/js?sensor=false"></script>
+	<script type="text/javascript" src="./js/json2.js"></script>
+	<script type="text/javascript" src="./js/jquery-1.7.2.min.js"></script>
+	<script type="text/javascript" src="./js/jquery.mobile-1.4.5.min.js"></script>
+	<script type="text/javascript" src="./js/jquery.timer.js"></script>
+    <script type="text/javascript" src="./js/tracker.js"></script>
+	<script type="text/javascript" src="./js/sim.js"></script>
+	<link rel="stylesheet" href="./css/jquery.mobile-1.4.2.css" /> 
+	<link rel="stylesheet" href="./css/sim.css" />	
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+</head>
+<body>
+<!-- Instructions -->
+	
+	<div id="instructions-a">
+		<div class="background"></div>
+		<div id="arrowUpContainer">
+				<img src="img/arrow_up.svg" onerror="this.onerror=null; this.src='img/arrow_up.png'">
+		</div>
+		
+		<p>Vul je team nummer in om te beginnen</p>
+		
+	</div>
+	
+	<div id="instructions-b">
+		<p>Selecteer je transport methode en begin gelijk met tracken!</p>
+		<div id="bendedArrowUpContainer">
+				<img src="img/arrow_bended.svg" onerror="this.onerror=null; this.src='img/arrow_bended.png'">
+		</div>
+		
+	</div>	
+	
+	<div id="instructions-c">
+		<p> instructies over tracking</p>
+	</div>
+<!-- Instructions -->	
+
+			<!-- Team number -->
+		<div id="team-number-container" class="ui-field-contain">
+			<span for="team-number">Team:</span>
+			<input type="text" name="team-number" id="team-number" placeholder="1234" value="">
+			<p id="team-number-set"></p>
+		</div>
+		<!-- team number -->
+		
+		
+<!-- Start of Home page -->
+<div data-role="page" id="home">
+
+	<div data-role="header">
+		
+		<div data-role="navbar">
+			
+			<ul>
+				<li><a href="#home" class="ui-btn-active ui-state-persist" data-transition="none"><img src="img/start_black.jpg" /></a></li>
+				<li><a href="#ranking" data-transition="none"><img src="img/ranking.jpg" /></a></li>
+				<li><a href="#uitleg" data-transition="none"><img src="img/about.jpg" /></a></li>
+			</ul>
+		</div>
+	</div>
+	
+
+	<div data-role="content">
+
+		<div id="transport_selection">
+			<img src="img/feet_black.jpg" id="walking" class="transport_images selected"/>
+			<img src="img/bike.jpg" id="bike" class="transport_images"/>
+			<!--<img src="img/public t.jpg" id="public_transport" class="transport_images"/>-->
+		</div>
+	
+		<div id="trackButtonContainer">
+				<a data-role="button" id="startTracking_start"  class="stopped"><img src="img/button_go.jpg" onerror="this.onerror=null; this.src='img/button_go.png'"></a>		
+		</div>
+		
+		
+		<div id="track_info_data">
+		<p>Geef hieronder gedurende je reis aan wat je van de plek vindt.</p>
+		<input type="range" name="slider" id="slider-0" value="3" min="1" max="5" />
+			<div id="face">
+			    <div id="mouth-box">
+			    	<div id="mouth" class="straight"></div>
+			    </div>
+			</div>
+			Tijd: <span id="timerlocation">00:00</span><br>
+			KM:<span id="kmlocation">0.00</span><br>
+			
+		</div>
+		<div id="table_container">
+			<img class="scrollnotification" src="img/scroll.jpg" />
+			<table id="history_tracklist" cellspacing="0">
+			</table>
+		</div>
+		
+	</div>
+
+
+</div>
+
+
+<!-- End of Home page -->
+
+<!-- Track Info page -->
+<div data-role="page" id="track_info">
+
+	<div data-role="header">
+		
+		<div data-role="navbar">
+			<ul>
+				<li><a href="#home" class="ui-btn-active ui-state-persist" data-transition="none"><img src="img/start.jpg" /></a></li>
+				<li><a href="#ranking" data-transition="none"><img src="img/ranking.jpg" /></a></li>
+				<li><a href="#uitleg" data-transition="none"><img src="img/about.jpg" /></a></li>
+			</ul>
+		</div>
+	</div>
+
+	<div data-role="content">	
+		<p id="track_info_info"></p>
+		
+		<div id="map_canvas"></div>
+		
+	</div>
+
+
+</div><!-- /page -->
+
+<!-- Ranking page -->
+<div data-role="page" id="ranking">
+
+	<div data-role="header">
+		
+		<div data-role="navbar">
+			<ul>
+				<li><a href="#home" class="ui-btn-active ui-state-persist" data-transition="none"><img src="img/start.jpg" /></a></li>
+				<li><a href="#ranking" data-transition="none"><img src="img/ranking_black.jpg" /></a></li>
+				<li><a href="#uitleg" data-transition="none"><img src="img/about.jpg" /></a></li>
+			</ul>
+		</div>
+	</div>
+
+	<div data-role="content">	
+		<p class="team_count"></p>
+		<table id="ranking_list" cellspacing="0">
+		</table>
+	</div> 
+
+
+</div><!-- /page -->
+
+<!-- Start of Uitleg page -->
+<div data-role="page" id="uitleg">
+
+	<div  data-role="header">
+        
+        <div  data-role="navbar">
+			<ul>
+				<li><a href="#home" class="ui-btn-active ui-state-persist" data-transition="none"><img src="img/start.jpg" /></a></li>
+				<li><a href="#ranking" data-transition="none"><img src="img/ranking.jpg" /></a></li>
+				<li><a href="#uitleg" data-transition="none"><img src="img/about_black.jpg" /></a></li>
+			</ul>
+		</div>
+    </div>
+
+	<div data-role="content">	
+		<p>Door middel van deze app is het mogelijk om je route te loggen. Door dit te doen kun je een inzicht krijgen van de bereikbaarheid van de stad. Vergeet hierbij niet dat je goed moet aangeven of je deze reis lopend of fietsend aflegt. Deze data geeft inzicht in leuke en minder leuke plekken op de Knowledge Mile.</p> 
+
+	</div>
+</div><!-- /page -->
+
+
+</body>
+</html>

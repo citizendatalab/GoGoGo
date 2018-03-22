@@ -1,0 +1,150 @@
+<div class="container-fluid fullHeight">
+  <div class="row fullHeight">
+    <div class="col-md-4 flex">
+    <div class="filtersContainer">
+      <div class="mainTitle">
+        <span class="pull-left backhome">
+          <a href="#!/home">
+          <span class="icon-Left-7" aria-hidden="true"></span>
+           home
+           </a>
+        </span>
+        <a href="#!/home">
+          <img src="images/logo.svg" />
+        </a>
+      </div>
+      <div class="row search">
+        <div class="col-md-6">
+          <input
+            type="text"
+            ng-model="searchTeam"
+            placeholder="Search team"
+            typeahead-on-select="onSelectedTeam($item, $model, $label, $event)"
+            uib-typeahead="team for team in teamsList | filter:$viewValue "
+            class="form-control"
+          >
+        </div>
+        <div class="col-md-6">
+          <button ng-if="filters.selectedTeam" ng-click="removeTeam()" type="button" class="btn btn-default">
+            {{filters.selectedTeam}}
+            <span class="glyphicon glyphicon-remove-sign" aria-hidden="true"></span>
+          </button>
+          <button ng-click="isOpen = !isOpen" type="button" class="btn btn-default pull-right">
+            <span class="glyphicon glyphicon-filter" aria-hidden="true"></span>
+          </button>
+
+        </div>
+      </div>
+      </div>
+      <div class="collapseWrapper" ng-class="{collapseHeight: !isOpen}">
+      <div class="filtersCollapse" ng-class="{filtersOpen: isOpen}">
+        <div class="row">
+          <div class="col-md-6">
+            <div class="checkbox-btn">
+              <span class="icon-Bike-1" aria-hidden="true"></span>
+              <span class="checkbox-txt">
+                Bike
+              </span>
+              <span class="pull-right">
+                <input type="checkbox" ng-model="filters.bike">
+              </span>
+            </div>
+          </div>
+          <div class="col-md-6">
+            <div class="checkbox-btn">
+              <span class="icon-Converse" aria-hidden="true"></span>
+              <span class="checkbox-txt">
+                Walking
+              </span>
+              <span class="pull-right">
+                <input type="checkbox" ng-model="filters.walking">
+              </span>
+            </div>
+          </div>
+        </div>
+        <div class="sliderContainer">
+          <rzslider rz-slider-model="slider.minValue"
+            rz-slider-high="slider.maxValue"
+            rz-slider-options="slider.options"></rzslider>
+          <div style="width:100%" slideraxes>
+          </div>
+       </div>
+      </div>
+  </div>
+      <div class="routesContainer">
+      <div ng-if="team.shown" ng-repeat="team in teams | filter:{key: filters.selectedTeam}:true | routes:filters ">
+        <!-- <div ng-if="team.shown"> -->
+          <ddn-sticky-wrapper>
+            <p class="clearfix teamHeader">
+              <span class="teamNumber pull-left">TEAM {{team.key}}</span>
+              <span class="teamRoutes pull-right">{{ team.values.length}} route{{team.values.length>1?'s':''}}</span>
+            </p>
+          </ddn-sticky-wrapper>
+          <div class="media"
+            ng-class="{'mediaActive':route.properties.id == singleRoute.features[0].properties.id}"
+            ng-attr-id="{{ route.properties.id }}"
+            ng-repeat="route in team.values"
+            ng-if="route.properties.show"
+            ng-click="getSingleRoute(team.key, route.properties.id)">
+
+            <div class="media-body">
+            <p>
+              {{route.properties.startDatetime | date:'MMM d, y'}} at {{route.properties.startDatetime | date:'HH:mm:ss'}}
+            </p>
+            <p>
+              <span ng-class="{walking:'icon-Converse', bike:'icon-Bike-1'}[route.properties.tm]" aria-hidden="true"></span>
+              <span class="routeInfo">{{route.properties.distance}}</span>km in <span class="routeInfo">{{(route.properties.endDatetime-route.properties.startDatetime) | date:'HH:mm:ss':'+000'}}</span>
+              <span class="meanRoute">
+                <i class="em"
+                  ng-if="singleTeamAvg && route.properties.id == singleRoute.features[0].properties.id"
+                  ng-class="{1:'em-tired_face', 2:'em-worried',3:'em-neutral_face',4:'em-blush',5:'em-smile'}[singleTeamAvg]">
+              </i>
+              </span>
+            </p>
+            </div>
+            <div class="media-right">
+              <div minimap route="route"></div>
+            </div>
+            <div class="singleRoute" ng-if="singleRoute && route.properties.id == singleRoute.features[0].properties.id">
+              <ul>
+                <li>
+                  START <span class="emoStep">{{route.properties.startDatetime | date:'EEEE HH:mm:ss'}}</span>
+                </li>
+                <li ng-repeat="line in singleRoute.features">
+                  <i class="em"
+                   ng-mouseover="setCenter(line.geometry.coordinates[0], line.properties.emotion)"
+                  ng-class="{1:'em-tired_face', 2:'em-worried',3:'em-neutral_face',4:'em-blush',5:'em-smile'}[line.properties.emotion]">
+                </i> {{(route.properties.endDatetime-route.properties.startDatetime)-(route.properties.endDatetime-line.properties.startDatetime) | date:'HH:mm:ss':'+000'}}
+                  <br />
+                  <div class="emoLine" ng-class="{1:'tired_face', 2:'worried',3:'neutral_face',4:'blush',5:'smile'}[line.properties.emotion]"></div>
+                </li>
+                <li>
+                  END <span class="emoStep">{{route.properties.endDatetime | date:'EEEE HH:mm:ss'}}</span>
+                </li>
+              </ul>
+            </div>
+          </div>
+        <!-- </div> shown -->
+      </div>
+    </div>
+  </div>
+    <div class="col-md-8 fullHeight">
+      <div id="map" class="fullHeight" map></div>
+    </div>
+  </div>
+</div>
+<div class="visible-xs visible-sm">
+  <div class="splashMobile">
+    <div>
+      <p>
+        <b>Sorry!</b>
+      </p>
+      <p>
+        In order to explore this website, you need a larger screen.
+      </p>
+      <p>
+        <a href="mailto:?Subject=Gogogo%20app%20link&Body=Hi%2C%0A%0Athis%20is%20the%20link%3A%0Ahttp%3A//calib.ro/gogogo-live%0A%0Ahave%20a%20nice%20day%21%0Athe%20Gogogo%20team">Send an e-mail</a> as a reminder.
+      </p>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,47 @@
+
+<svg width="243px" height="129px" viewBox="204 647 243 129" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 41.1 (35376) - http://www.bohemiancoding.com/sketch -->
+    <desc>Created with Sketch.</desc>
+    <defs>
+        <rect id="path-1" x="204" y="647" width="20" height="20"></rect>
+        <mask id="mask-2" maskContentUnits="userSpaceOnUse" maskUnits="objectBoundingBox" x="0" y="0" width="20" height="20" fill="white">
+            <use xlink:href="#path-1"></use>
+        </mask>
+        <rect id="path-3" x="204" y="674.8406" width="20" height="20"></rect>
+        <mask id="mask-4" maskContentUnits="userSpaceOnUse" maskUnits="objectBoundingBox" x="0" y="0" width="20" height="20" fill="white">
+            <use xlink:href="#path-3"></use>
+        </mask>
+        <rect id="path-5" x="204" y="701.8406" width="20" height="20"></rect>
+        <mask id="mask-6" maskContentUnits="userSpaceOnUse" maskUnits="objectBoundingBox" x="0" y="0" width="20" height="20" fill="white">
+            <use xlink:href="#path-5"></use>
+        </mask>
+        <rect id="path-7" x="204" y="728.8406" width="20" height="20"></rect>
+        <mask id="mask-8" maskContentUnits="userSpaceOnUse" maskUnits="objectBoundingBox" x="0" y="0" width="20" height="20" fill="white">
+            <use xlink:href="#path-7"></use>
+        </mask>
+        <rect id="path-9" x="204" y="755.8406" width="20" height="20"></rect>
+        <mask id="mask-10" maskContentUnits="userSpaceOnUse" maskUnits="objectBoundingBox" x="0" y="0" width="20" height="20" fill="white">
+            <use xlink:href="#path-9"></use>
+        </mask>
+    </defs>
+    <text id="Hotel/Restaurant/Caf" stroke="none" fill="none" font-family="Chivo-Regular, Chivo" font-size="13" font-weight="normal">
+        <tspan x="233" y="660" fill="#162933">Hotel/Restaurant/Café (HORECA)</tspan>
+    </text>
+    <text id="Cultureel-(cultural)" stroke="none" fill="none" font-family="Chivo-Regular, Chivo" font-size="13" font-weight="normal">
+        <tspan x="233" y="689" fill="#162933">Cultureel (cultural)</tspan>
+    </text>
+    <text id="Cafè" stroke="none" fill="none" font-family="Chivo-Regular, Chivo" font-size="13" font-weight="normal">
+        <tspan x="233" y="716.8406" fill="#162933">Cafè</tspan>
+    </text>
+    <text id="Groen-(green-areas)" stroke="none" fill="none" font-family="Chivo-Regular, Chivo" font-size="13" font-weight="normal">
+        <tspan x="233" y="743.8406" fill="#162933">Groen (green areas)</tspan>
+    </text>
+    <text id="Onderwijs-(education" stroke="none" fill="none" font-family="Chivo-Regular, Chivo" font-size="13" font-weight="normal">
+        <tspan x="233" y="769.8406" fill="#162933">Onderwijs (education)</tspan>
+    </text>
+    <use id="Rectangle-9" stroke="#0700B0" mask="url(#mask-2)" stroke-width="4" fill="none" xlink:href="#path-1"></use>
+    <use id="Rectangle-9-Copy" stroke="#AB9F00" mask="url(#mask-4)" stroke-width="4" fill="none" xlink:href="#path-3"></use>
+    <use id="Rectangle-9-Copy-2" stroke="#A074DC" mask="url(#mask-6)" stroke-width="4" fill="none" xlink:href="#path-5"></use>
+    <use id="Rectangle-9-Copy-3" stroke="#00BDBB" mask="url(#mask-8)" stroke-width="4" fill="none" xlink:href="#path-7"></use>
+    <use id="Rectangle-9-Copy-4" stroke="#8B572A" mask="url(#mask-10)" stroke-width="4" fill="none" xlink:href="#path-9"></use>
+</svg>

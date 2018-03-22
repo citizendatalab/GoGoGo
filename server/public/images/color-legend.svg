@@ -1,0 +1,20 @@
+
+<svg width="222px" height="27px" viewBox="203 744 222 27" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 41.1 (35376) - http://www.bohemiancoding.com/sketch -->
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <rect id="Rectangle-8" stroke="none" fill="#C32E40" fill-rule="evenodd" x="203.458802" y="744.2469" width="42.5551224" height="9.6"></rect>
+    <rect id="Rectangle-8-Copy" stroke="none" fill="#F6A623" fill-rule="evenodd" x="248.205321" y="744.2469" width="42.5551224" height="9.6"></rect>
+    <rect id="Rectangle-8-Copy-2" stroke="none" fill="#F8E81C" fill-rule="evenodd" x="292.95184" y="744.2469" width="42.5551224" height="9.6"></rect>
+    <rect id="Rectangle-8-Copy-3" stroke="none" fill="#7ED321" fill-rule="evenodd" x="337.698359" y="744.2469" width="42.5551224" height="9.6"></rect>
+    <rect id="Rectangle-8-Copy-4" stroke="none" fill="#417505" fill-rule="evenodd" x="382.444878" y="744.2469" width="42.5551224" height="9.6"></rect>
+    <text id="Very-Bad" stroke="none" fill="none" font-family="Chivo-Regular, Chivo" font-size="10" font-weight="normal">
+        <tspan x="203" y="767.6875" fill="#9B9B9B">Very Bad</tspan>
+    </text>
+    <text id="Normal" stroke="none" fill="none" font-family="Chivo-Regular, Chivo" font-size="10" font-weight="normal">
+        <tspan x="295.506962" y="767.6875" fill="#9B9B9B">Normal</tspan>
+    </text>
+    <text id="Very-Good" stroke="none" fill="none" font-family="Chivo-Regular, Chivo" font-size="10" font-weight="normal">
+        <tspan x="376" y="767.6875" fill="#9B9B9B">Very Good</tspan>
+    </text>
+</svg>

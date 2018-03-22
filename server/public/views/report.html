@@ -1,0 +1,124 @@
+<div class="container-fluid fullHeight">
+  <div class="row fullHeight">
+      <div class="col-md-4 flex reportFlexCont">
+      <div class="filtersContainer">
+        <div class="mainTitle">
+          <span class="pull-left backhome">
+            <a href="#!/home">
+            <span class="icon-Left-7" aria-hidden="true"></span>
+             home
+             </a>
+          </span>
+          <a href="#!/home">
+            <img src="images/logo.svg" />
+          </a>
+        </div>
+       </div>
+       <div class="reportsContainer">
+           <div class="media" ng-class="{'mediaActive': checkReport('all')}" ng-click="reportType = 'all'">
+              <div class="media-body">
+                <p>
+                  {{totalRoutes}} routes - {{totalTeams}} teams
+                </p>
+              <p>
+                <span class="routeInfoReport">All routes with emotions</span>
+              </p>
+              </div>
+              <div class="media-right">
+                <span class="glyphicon glyphicon-menu-right"></span>
+              </div>
+           </div>
+           <div class="media" ng-class="{'mediaActive': checkReport('average'), 'mediaDisabled': loading}" ng-click="reportType = 'average'">
+              <div class="media-body">
+                <p>
+                  {{areas}} areas - {{dataPoints | number:0}} data points
+                </p>
+              <p>
+                <span class="routeInfoReport">Average emotion per area</span>
+              </p>
+              </div>
+              <div class="media-right">
+                <span class="glyphicon" ng-class="{true: 'glyphicon-refresh spinning', false: 'glyphicon-menu-right'}[loading]"></span>
+              </div>
+           </div>
+           <div class="media" ng-class="{'mediaActive': checkReport('poi'), 'mediaDisabled': loading}" ng-click="reportType = 'poi'">
+              <div class="media-body">
+                <p>
+                  {{poi}} points of interest - {{poiDataPoints | number:0}} data points
+                </p>
+              <p>
+                <span class="routeInfoReport">Points of interest</span>
+              </p>
+              </div>
+              <div class="media-right">
+                <span class="glyphicon" ng-class="{true: 'glyphicon-refresh spinning', false: 'glyphicon-menu-right'}[loading]"></span>
+              </div>
+           </div>
+      </div>
+      <div class="legendContainer">
+        <div class="row">
+          <div class="col-md-4">
+            <h3>
+              how to read the map
+            </h3>
+          </div>
+          <div class="col-md-8" ng-if="reportType == 'all'">
+            <p>
+              <b>COLOR</b>: How do students perceive the area they are passing through?
+            </p>
+            <p>
+              <img class="legendHelper" src="images/color-legend.svg" />
+            </p>
+          </div>
+          <div class="col-md-8" ng-if="reportType == 'average'">
+            <p>
+              <b>COLOR</b>: Most prominent mood per area registered by data sprint students.
+            </p>
+            <p>
+              <img class="legendHelper" src="images/color-legend.svg" />
+            </p>
+            <p>
+              <b>AREA</b>
+            </p>
+            <p>
+              <img src="images/block-legend.svg" />
+            </p>
+          </div>
+          <div class="col-md-8" ng-if="reportType == 'poi'">
+            <p>
+              <b>COLOR</b>: most prominent mood per point of interest registered by data sprint students
+            </p>
+            <p>
+              <img class="legendHelper" src="images/color-legend.svg" />
+            </p>
+            <p>
+              <b>STROKE</b>: point of interest category
+            </p>
+            <p>
+              <img class="legendHelper" src="images/cat-legend.svg" />
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="col-md-8 fullHeight">
+      <div id="map" class="fullHeight" mapall></div>
+    </div>
+  </div>
+</div>
+
+<div class="visible-xs visible-sm">
+  <div class="splashMobile">
+    <div>
+      <p>
+        <b>Sorry!</b>
+      </p>
+      <p>
+        In order to explore this website, you need a larger screen.
+      </p>
+      <p>
+        <a href="mailto:?Subject=Gogogo%20app%20link&Body=Hi%2C%0A%0Athis%20is%20the%20link%3A%0Ahttp%3A//calib.ro/gogogo-live%0A%0Ahave%20a%20nice%20day%21%0Athe%20Gogogo%20team">Send an e-mail</a> as a reminder.
+      </p>
+    </div>
+  </div>
+</div>
