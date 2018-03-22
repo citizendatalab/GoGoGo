@@ -4,7 +4,7 @@
 ## About
 The GOGOGO project was a data sprint that was held from 12 – 26 November 2016 in Amsterdam. The aim was to log customer journeys and how they experience the place they are currently at. The experiment took place on the Knowledge Mile: the area that runs from the Nieuwmarkt to the Amstel train station. The data sprint was organized by the Citizen Data Lab, in collaboration with the Media Information and Communication program of the Amsterdam University of Applied Sciences, Calibro (IT). 300+ students participated to collect over 206 routes, more than 94,000 unique data entries and over 98 hours of logged route data.
 
-The results can be viewed [here](http://calib.ro/gogogo-live/#/home) 
+More information and the final results can be viewed [here](http://cargocollective.com/citizendatalab/Participatory-Mapping/GoGoGo) 
 
 ## Code
 The code consists of an Cordova app and a server to store the data.
